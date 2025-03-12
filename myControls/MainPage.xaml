@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myControls.MainPage">
+
+
+
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Image Source="netmauidev.png"
+                 Aspect="AspectFit" />
+            
+            
+            <Label Text="Steuerelemente in .NET MAUI"
+                   FontSize="24"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="usernameEntry"
+                   Placeholder="Gib deinen Namen ein" />
+
+            <Editor x:Name="commentEditor"
+                    Placeholder="Dein Kommentar..."
+                    AutoSize="TextChanges" />
+
+            <Picker x:Name="countryPicker"
+                    Title="Land auswählen">
+                <Picker.Items>
+                    <x:String>Deutschland</x:String>
+                    <x:String>Österreich</x:String>
+                    <x:String>Schweiz</x:String>
+                </Picker.Items>
+            </Picker>
+
+      
+            <DatePicker x:Name="birthdatePicker"
+                        Format="D"
+                        Date="12.03.2025"/>
+
+          
+            <TimePicker x:Name="reminderTimePicker"
+                        Format="t"
+                        Time="08:00:00" />
+
+          
+            <Button Text="Senden"
+                    Clicked="OnSendButtonClicked" />
+
+            <ImageButton Source="icon_send.png"
+                        
+                         Clicked="OnSendButtonClicked" />
+
+           
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+    
+</ContentPage>
